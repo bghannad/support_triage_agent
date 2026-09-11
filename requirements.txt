@@ -1,0 +1,19 @@
+# Orchestration
+langgraph
+langchain
+langchain-openai
+
+# RAG / vector store
+chromadb
+openai
+
+# Demo UI
+gradio
+
+# Evaluation
+scikit-learn
+pandas
+
+# Utils
+python-dotenv
+pydantic
