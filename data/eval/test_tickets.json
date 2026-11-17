@@ -1,0 +1,102 @@
+[
+  {
+    "ticket": "I never got my invoice for this month, where can I find it?",
+    "true_category": "billing",
+    "expected_doc": "billing_01_invoice_not_received.md"
+  },
+  {
+    "ticket": "My card was declined and now I'm worried my account will be deleted",
+    "true_category": "billing",
+    "expected_doc": "billing_02_failed_payment.md"
+  },
+  {
+    "ticket": "I canceled within a week of signing up for the annual plan, can I get my money back?",
+    "true_category": "billing",
+    "expected_doc": "billing_03_refund_policy.md"
+  },
+  {
+    "ticket": "If I switch from monthly to annual today, when does my new renewal date land?",
+    "true_category": "billing",
+    "expected_doc": "billing_04_upgrade_downgrade_plan.md"
+  },
+  {
+    "ticket": "I was charged twice this month, can I get a refund?",
+    "true_category": "billing",
+    "expected_doc": "billing_03_refund_policy.md"
+  },
+  {
+    "ticket": "I forgot my password and the reset email never showed up",
+    "true_category": "account_access",
+    "expected_doc": "account_01_reset_password.md"
+  },
+  {
+    "ticket": "It says my account is locked, I tried logging in too many times",
+    "true_category": "account_access",
+    "expected_doc": "account_02_locked_account_too_many_attempts.md"
+  },
+  {
+    "ticket": "I lost access to my old email, how do I update the email on my account?",
+    "true_category": "account_access",
+    "expected_doc": "account_03_change_email_on_file.md"
+  },
+  {
+    "ticket": "How do I invite a new teammate and how does that affect our bill?",
+    "true_category": "account_access",
+    "expected_doc": "account_04_multiple_users_seats.md"
+  },
+  {
+    "ticket": "My files aren't syncing between my laptop and phone anymore",
+    "true_category": "technical",
+    "expected_doc": "technical_01_sync_not_working.md"
+  },
+  {
+    "ticket": "The app has gotten really sluggish, especially one big table view",
+    "true_category": "technical",
+    "expected_doc": "technical_02_slow_performance.md"
+  },
+  {
+    "ticket": "Our Slack integration stopped posting updates, how do I fix it?",
+    "true_category": "technical",
+    "expected_doc": "technical_03_integration_broken.md"
+  },
+  {
+    "ticket": "I need to download a full backup of everything in my account",
+    "true_category": "technical",
+    "expected_doc": "technical_04_data_export.md"
+  },
+  {
+    "ticket": "I think someone accessed my account without permission, I see logins I don't recognize",
+    "true_category": "security",
+    "expected_doc": "security_01_suspicious_activity.md"
+  },
+  {
+    "ticket": "I want all my personal data permanently deleted under GDPR",
+    "true_category": "security",
+    "expected_doc": "security_02_data_privacy_request.md"
+  },
+  {
+    "ticket": "Can you walk me through when a ticket should go to a human instead of being auto-answered?",
+    "true_category": "other",
+    "expected_doc": "escalation_01_when_to_escalate.md"
+  },
+  {
+    "ticket": "We're on the Enterprise plan, does that change how support tickets get handled?",
+    "true_category": "other",
+    "expected_doc": "escalation_02_enterprise_account_handling.md"
+  },
+  {
+    "ticket": "asdkj not working pls fix idk what happened",
+    "true_category": "technical",
+    "expected_doc": "technical_01_sync_not_working.md"
+  },
+  {
+    "ticket": "hi there just wanted to say your product is great, no issues",
+    "true_category": "other",
+    "expected_doc": null
+  },
+  {
+    "ticket": "can someone escalate this immediately, I demand a manager right now",
+    "true_category": "other",
+    "expected_doc": "escalation_01_when_to_escalate.md"
+  }
+]

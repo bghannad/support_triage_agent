@@ -1,0 +1,30 @@
+# Local Chroma vector DB for development, plus (new) the full app container
+# so the whole system can be tested locally, exactly as it will run on
+# Azure, before spending anything on cloud deployment.
+services:
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8000:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    depends_on:
+      - chroma
+    env_file:
+      - ../.env
+    environment:
+      # Overrides .env's CHROMA_HOST=localhost: inside this compose network,
+      # containers reach each other by SERVICE NAME, not localhost — "chroma"
+      # here is resolved via Docker's internal DNS to the chroma container.
+      - CHROMA_HOST=chroma
+      - CHROMA_PORT=8000
+    ports:
+      - "7860:7860"
+
+volumes:
+  chroma_data:

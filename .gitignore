@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Env / secrets
+.env
+
+# Chroma local vector store data
+chroma_db/
+data/chroma/
+
+# OS
+.DS_Store
+
+# Notebooks
+.ipynb_checkpoints/
