@@ -164,8 +164,8 @@ Trade-offs made to keep this project scoped:
 
 
 
-  ============================================================
-CLASSIFICATION EVAL
+============================================================
+### CLASSIFICATION EVAL
 ============================================================
 Accuracy: 90.00%
 
@@ -182,7 +182,7 @@ Misclassifications:
   [technical -> account_access] I need to download a full backup of everything in my account
 
 ============================================================
-RETRIEVAL EVAL
+### RETRIEVAL EVAL
 ============================================================
 Recall@3: 100.00%  (correct doc appeared in top 3 results)
 MRR: 1.000  (rewards the correct doc ranking HIGHER within top 3, not just present)
