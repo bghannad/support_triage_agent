@@ -1,0 +1,35 @@
+# Runs on every push and pull request.
+# No OpenAI key and no Chroma needed: the LLM, retrieval and answer steps are faked
+# in the tests. The real LLM evaluation (src/eval.py) costs money and is
+# non-deterministic, so it is run on demand, not here.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"   # same Python as the Docker image
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: pytest -v
+
+  docker-build:
+    # Checks that the app image still builds (it is not pushed anywhere).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the app image
+        run: docker build -f docker/Dockerfile -t support-triage-agent:ci .
