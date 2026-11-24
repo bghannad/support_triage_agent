@@ -164,9 +164,12 @@ Trade-offs made to keep this project scoped:
 
 
 
+
+
 ============================================================
 ### CLASSIFICATION EVAL
 ============================================================
+
 Accuracy: 90.00%
 
   account_access       precision=0.75  recall=0.75  f1=0.75  support=4
@@ -184,6 +187,7 @@ Misclassifications:
 ============================================================
 ### RETRIEVAL EVAL
 ============================================================
+
 Recall@3: 100.00%  (correct doc appeared in top 3 results)
 MRR: 1.000  (rewards the correct doc ranking HIGHER within top 3, not just present)
 Scored on 19/20 tickets (some have no single correct doc)
