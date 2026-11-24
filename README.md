@@ -161,3 +161,29 @@ Trade-offs made to keep this project scoped:
   images with a managed identity instead.
 - **No CI/CD** — the deploy script is run manually. A real production version would wire this into
   a pipeline (e.g. GitHub Actions) that builds, tests, and deploys on push.
+
+
+
+  ============================================================
+CLASSIFICATION EVAL
+============================================================
+Accuracy: 90.00%
+
+  account_access       precision=0.75  recall=0.75  f1=0.75  support=4
+  billing              precision=0.83  recall=1.00  f1=0.91  support=5
+  other                precision=1.00  recall=1.00  f1=1.00  support=4
+  security             precision=1.00  recall=1.00  f1=1.00  support=2
+  technical            precision=1.00  recall=0.80  f1=0.89  support=5
+  macro avg            precision=0.92  recall=0.91  f1=0.91  support=20
+  weighted avg         precision=0.91  recall=0.90  f1=0.90  support=20
+
+Misclassifications:
+  [account_access -> billing] How do I invite a new teammate and how does that affect our bill?
+  [technical -> account_access] I need to download a full backup of everything in my account
+
+============================================================
+RETRIEVAL EVAL
+============================================================
+Recall@3: 100.00%  (correct doc appeared in top 3 results)
+MRR: 1.000  (rewards the correct doc ranking HIGHER within top 3, not just present)
+Scored on 19/20 tickets (some have no single correct doc)
